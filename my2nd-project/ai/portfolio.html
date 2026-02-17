@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eloi | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #0f2027, #000607, #478ead);
+  color: #fff;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(12px);
+  padding: 18px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #00ffe0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff4d6d;
+  transform: scale(1.1);
+}
+
+/* ================= SECTIONS ================= */
+section {
+  min-height: 100vh;
+  padding: 120px 10%;
+}
+
+/* ================= HERO ================= */
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+   background-image: url("f.png");
+ 
+}
+.hero{
+   background-color: rgb(0, 0, 0,) ;
+   
+   
+   
+}
+
+#hero h1 {
+  font-size: 3.2rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+#hero p {
+  max-width: 600px;
+  color: #ccc;
+  margin: 20px 0 40px;
+}
+
+#hero button {
+  padding: 15px 40px;
+  border-radius: 30px;
+  border: none;
+  background: #ff4d6d;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#hero button:hover {
+  background: #00ffe0;
+  color: #000;
+  transform: scale(1.15);
+}
+
+/* ================= ABOUT ================= */
+#about {
+  background: rgba(255,255,255,0.08);
+  border-radius: 25px;
+  padding: 60px;
+  animation: reveal 1.2s ease forwards;
+}
+
+#about h2 {
+  color: #00ffe0;
+  margin-bottom: 20px;
+}
+
+/* ================= SKILLS ================= */
+#skills h2,
+#projects h2,
+#contact h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #ff4d6d;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 25px;
+}
+
+.skill-card {
+  background: rgba(255,255,255,0.12);
+  padding: 35px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.skill-card:hover {
+  transform: translateY(-15px) rotate(-3deg);
+  box-shadow: 0 0 30px rgba(0,255,224,0.6);
+}
+
+/* ================= PROJECTS ================= */
+.projects-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 50px;
+  display: flow-root;
+
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.project-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.project-card:hover {
+  transform: translateY(-20px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.project-card h3 {
+  padding: 15px;
+  color: #00ffe0;
+}
+
+.project-card p {
+  padding: 0 15px 20px;
+  color: #ccc;
+}
+
+/* ================= CONTACT ================= */
+form {
+  max-width: 420px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0px 0px 450px -60px   #00ffe0;
+  border-radius: 20px;
+  padding: 90px 40px;
+}
+
+input, textarea {
+  
+  
+  border-right:none ;
+  border-left: none;
+  border-top: none;
+   background-color: rgb(0, 0, 0,0.001);
+  color: #ccc;
+  border-color: #00ffe0;
+  font-size: 17px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: rgba(0,0,0,0.6);
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+input{
+    text-align: center;
+}
+.BT1{
+    padding: 10px 14px;
+    border-radius: 10px;
+    border-color: #00ffe0;
+      background-color: rgb(0, 0, 0,0.001);
+}
+.BT1:hover{
+     padding: 10px 14px;
+     background:linear-gradient(120deg, #0f2027, #000607, #478ead);
+     border-color:red ;
+     color: white;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">Eloi</div>
+  <ul>
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="hero" class="hero">
+  <h1>Hello, I'm Eloi Shema</h1>
+  <p>Frontend developer building animated, modern, and interactive web experiences.</p>
+  <button onclick="contact.scrollIntoView()">Hire Me</button>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a passionate and detail-oriented
+     developer with a strong interest in building 
+     clean, efficient, and user-focused digital 
+     solutions. My journey in technology is driven by curiosity,
+      problem-solving, and a constant desire to learn and
+       improve. I enjoy working with modern web technologies, 
+       especially JavaScript and its ecosystem, where I focus on creating 
+       interactive, well-structured, and scalable applications. Beyond writing code
+       , I value understanding how things work under the hood, which helps me design 
+       better logic, write maintainable code, and approach challenges with a thoughtful mi
+       ndset. I believe that good software is not just about functionality, but a
+       lso about clarity, performance, and user experience
+       . I am always eager to take on ne
+       w challenges, explore advanced concepts, and push my skills to
+     the next level while contributing meaningful 
+     solutions that make an impact.</p>
+</section>
+
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card">HTML</div>
+    <div class="skill-card">CSS</div>
+    <div class="skill-card">JavaScript</div>
+    <div class="skill-card">Vue.js</div> 
+     <div class="skill-card">GIT</div>
+      <div class="skill-card">Graphic</div>
+       <div class="skill-card">UI/UX</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="projects-grid">
+    <a href="sch.html" class="project-link">
+      <div class="project-card">
+        <img src="e.png">
+        <h3>School Management System</h3>
+        <p>Making school work easier and fast</p>
+      </div>
+    </a><br>
+     
+ <a href="temperature_c.html" class="project-link">
+      <div class="project-card" >
+        <img src="t.png">
+        <h3>Temperature Converter</h3>
+        <p>converts temperature from Celsius ➜ Fahrenheit or Fahrenheit ➜ Celsius</p>
+      </div>
+    </a> <br>
+     
+     <a href="dice_roller.html" class="project-link">
+      <div class="project-card" id="pi2">
+        <img src="dice.png">
+        <h3>Dice roller</h3>
+        <p>A dice rolling game made with javascript</p>
+      </div>
+      
+    </a>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form>
+    <input placeholder="Name">
+    <input placeholder="Email">
+    <textarea rows="4" placeholder="Message"></textarea>
+    <button onclick="contact.scrollIntoView()" class="BT1">Send</button>
+  </form>
+</section>
+
+<footer>© 2026 Eloi Shema</footer>
+
+</body>
+</html>
